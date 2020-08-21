@@ -1,0 +1,8 @@
+{
+  "video": "path/to/video/myvideo.mp4",
+  "pedestrian_model_weights": "models/intel/person-detection-retail-0013/FP32/person-detection-retail-0013.bin",
+  "pedestrian_model_description": "models/intel/person-detection-retail-0013/FP32/person-detection-retail-0013.xml",
+  "reidentification_model_weights": "models/intel/person-reidentification-retail-0300/FP32/person-reidentification-retail-0300.bin",
+  "reidentification_model_description": "models/intel/person-reidentification-retail-0300/FP32/person-reidentification-retail-0300.xml",
+  "coords": [[0, 0], [0, 100], [100, 100], [100, 0]]
+}
