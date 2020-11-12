@@ -59,7 +59,7 @@ class SocialDistance(object):
     def load_openvino(self):
         try:
             ie = IECore()
-            net = IENetwork.from_ir(model=self.model_configfile, weights=self.model_modelfile)
+            net = ie.read_network(model=self.model_configfile, weights=self.model_modelfile)
             self.ov_input_blob = next(iter(net.inputs))
             self.out_blob = next(iter(net.outputs))
             self.net = ie.load_network(network=net, num_requests=2, device_name="CPU")
@@ -73,7 +73,7 @@ class SocialDistance(object):
     def load_openvino_reid(self):
         try:
             ie = IECore()
-            net = IENetwork.from_ir(model=self.model_configfile_reid, weights=self.model_modelfile_reid)
+            net = ie.read_network(model=self.model_configfile_reid, weights=self.model_modelfile_reid)
             self.ov_input_blob_reid = next(iter(net.inputs))
             self.out_blob_reid = next(iter(net.outputs))
             self.net_reid = ie.load_network(network=net, num_requests=2, device_name="CPU")
